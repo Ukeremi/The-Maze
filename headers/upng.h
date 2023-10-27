@@ -48,8 +48,12 @@ typedef enum upng_format
 	UPNG_RGBA16,
 	UPNG_LUMINANCE1,
 	UPNG_LUMINANCE2,
+	UPNG_LUMINANCE4,
+	UPNG_LUMINANCE8,
+	UPNG_LUMINANCE_ALPHA1,
+	UPNG_LUMINANCE_ALPHA2,
 	UPNG_LUMINANCE_ALPHA4,
-        UPNG_LUMINANCE_ALPHA8
+	UPNG_LUMINANCE_ALPHA8
 } upng_format;
 
 typedef struct upng_t upng_t;
@@ -70,7 +74,7 @@ unsigned int upng_get_bpp(const upng_t *upng);
 unsigned int upng_get_bitdepth(const upng_t *upng);
 unsigned int upng_get_components(const upng_t *upng);
 unsigned int upng_get_pixelsize(const upng_t *upng);
-upng_format     upng_get_format(const upng_t *upng);
+upng_format	upng_get_format(const upng_t *upng);
 
 const unsigned char *upng_get_buffer(const upng_t *upng);
 unsigned int upng_get_size(const upng_t *upng);
